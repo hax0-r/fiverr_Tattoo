@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stilbruch Tattoo</title>
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./Docs/Style.css">
+</head>
+
+<body>
+
+    <div class="bottomToTop fadeIn hidden">
+        <i class="fa-solid fa-arrow-up"></i>
+    </div>
+
+    <div style="width: 0;" id="resNav"
+        class="fixed transition-all duration-500 overflow-hidden h-screen top-0 left-0 bg-white z-50">
+        <div class="">
+            <div class="flex p-5 items-center justify-between">
+                <a href="./index.html">
+                    <h2 class="uppercase noodle text-2xl text-nowrap">Stilbruch Tattoo</h2>
+                </a>
+                <i id="closeNav" class="fa-solid fa-x text-xl"></i>
+            </div>
+
+            <div class="mt-8 text-nowrap px-5 w-full flex flex-col gap-10 justify-between h-[80vh] overflow-auto">
+                <ul class="  flex-col gap-8 flex ">
+
+                    <li> <a href="./index.html" class="hover:text-[#0a3a22] transition-all duration-500">
+                            Künstler</a>
+                    </li>
+                    <li> <a href="./AboutUs.html" class="hover:text-[#0a3a22] transition-all duration-500">
+                            Studio</a>
+                    </li>
+                    <li> <a href="./Services.html" class`="hover:text-[#0a3a22] transition-all duration-500">
+                            Tattoopflege</a>
+                    </li>
+                    <li> <a href="./Gallery.html" class="hover:text-[#0a3a22] transition-all duration-500">
+                            Kontakt</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="min-h-screen w-full homeBg">
+        <div class="bg-white w-full h-20">
+            <div class="flex items-center justify-between max-w-7xl w-full mx-auto p-5">
+                <a href="./index.html">
+                    <h2 class="uppercase noodle text-2xl">Stilbruch Tattoo</h2>
+                </a>
+                <div class="flex items-center gap-3">
+                    <ul class="hidden items-center justify-center gap-8 lg:flex ">
+                        <li> <a href="./index.html" class=" font-light cursor-pointer transition-all duration-500">
+                                Künstler</a>
+                        </li>
+                        <li> <a href="./AboutUs.html" class=" font-light cursor-pointer transition-all duration-500">
+                                Studio</a></li>
+                        <li> <a href="./Services.html" class=" font-light cursor-pointer transition-all duration-500">
+                                Tattoopflege</a></li>
+                        <li> <a href="./Gallery.html" class=" font-light cursor-pointer transition-all duration-500">
+                                Kontakt</a></li>
+                    </ul>
+                    <div class="lg:hidden">
+                        <i class="fa-solid fa-bars text-2xl cursor-pointer" id="openNav"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="max-w-7xl min-h-[calc(100vh-5rem)] flex items-end justify-center w-full mx-auto p-5">
+            <h1 class="md:text-[160px] !text-white noodle text-center text-8xl font-semobold tracking-wide pb-6 ">
+                Stilbruch Tattoo
+            </h1>
+        </div>
+
+    </div>
+
+    <div
+        class="max-w-7xl w-full mx-auto md:mt-20 mt-10 flex items-start justify-between md:gap-10 p-5 gap-6 md:flex-row flex-col">
+        <h2 class="text-[24px] md:max-w-[50%] w-full">Willkommen bei Stilbruch Tattoo! Wir sind ein kleines Tattoo
+            Studio im Herzen von Berlin.</h2>
+        <p class="md:max-w-[50%] w-full">Beim Tätowieren bringen wir nicht einfach nur Farbe unter die Haut, oft haben
+            Tattoos eine emotionale Bedeutung, sie erinnern uns an liebe Menschen, halten Erlebnisse fest, schaﬀen
+            Erinnerungen und drücken aus wer wir sind. Wir bei Stilbruch Tattoo sind uns dieser Verantwortung bewusst,
+            bei uns stehst du als Kund:in mit deinen Vorstellungen im Mittelpunkt.</p>
+    </div>
+
+    <div class="max-w-7xl w-full mx-auto md:mt-20 mt-8 gap-3 p-5 grid md:grid-cols-2 grid-cols-1">
+        <div class="relative flex items-center justify-center">
+            <img src="./Docs/Assets/img (4).jpg" class="w-full object-cover md:h-[522px] h-80 grayscale" alt="img">
+            <h2 class="uppercase md:bottom-8 bottom-9 !text-white absolute font-semobold noodle md:text-[96px] text-6xl">Slava</h2>
+        </div>
+        <div class="relative flex items-center justify-center">
+            <img src="./Docs/Assets/img (3).jpg" class="w-full object-cover md:h-[522px] h-80 grayscale" alt="img">
+            <h2 class="uppercase md:bottom-8 bottom-9 !text-white absolute font-semobold noodle md:text-[96px] text-6xl">Toni</h2>
+        </div>
+        <div class="relative flex items-center justify-center">
+            <img src="./Docs/Assets/img (2).jpg" class="w-full object-cover md:h-[522px] h-80 grayscale" alt="img">
+            <h2 class="uppercase md:bottom-8 bottom-9 !text-white absolute font-semobold noodle md:text-[96px] text-6xl">SOcio</h2>
+        </div>
+        <div class="relative flex items-center justify-center">
+            <img src="./Docs/Assets/img (1).jpg" class="w-full object-cover md:h-[522px] h-80 grayscale" alt="img">
+            <h2 class="uppercase md:bottom-8 bottom-9 !text-white absolute font-semobold noodle md:text-[96px] text-6xl">Jascha</h2>
+        </div>
+       
+    </div>
+
+
+
+</body>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="./Docs/Javascript.js"></script>
+
+</html>
