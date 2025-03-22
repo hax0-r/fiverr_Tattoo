@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stilbruch Tattoo - Datenschutz</title>
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./Docs/Style.css">
+    <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
+</head>
+
+<body>
+
+    <div id="bottomToTopScroll"></div>
+    <div id="navbar"></div>
+
+
+    <div
+        class="w-full mx-auto max-w-7xl p-5 w-full mx-auto flex items-start md:mt-20 mt-3 justify-between md:gap-14  gap-6 lg:flex-row flex-col">
+        <div class="lg:max-w-[40%] w-full">
+            <h2 class="md:text-[64px] noodle text-5xl ">Datenschutz</h2>
+        </div>
+        <div class="lg:max-w-[60%] w-full">
+            <ul class="flex flex-col">
+                <li class="bg-white my-2" x-data="accordion(1)">
+                    <h2 @click="handleClick()" class="flex flex-row justify-between items-center p-3 cursor-pointer">
+                        <span class="text-[24px] !font-semibold ">Allgemeine Hinweise</span>
+                        <i :class="handleRotate()" class="fa-solid fa-sort-down transition-all duration-500"></i>
+                    </h2>
+                    <div x-ref="tab" :style="handleToggle()"
+                        class="overflow-hidden max-h-0 duration-500 transition-all">
+                        <div class="p-3">
+                            <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren
+                                personenbezogenen Daten passiert, wenn Sie unsere Website besuchen. Personenbezogene
+                                Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.
+                                Ausführliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text
+                                aufgeführten Datenschutzerklärung.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="bg-white my-2" x-data="accordion(2)">
+                    <h2 @click="handleClick()" class="flex flex-row justify-between items-center p-3 cursor-pointer">
+                        <span class="text-[24px] !font-semibold ">Datenerfassung auf unserer Website</span>
+                        <i :class="handleRotate()" class="fa-solid fa-sort-down transition-all duration-500"></i>
+                    </h2>
+                    <div x-ref="tab" :style="handleToggle()"
+                        class="overflow-hidden max-h-0 duration-500 transition-all">
+                        <div class="p-3">
+                            <h3 class="!font-semibold mb-1">Wer ist verantwortlich für die Datenerfassung auf dieser
+                                Website?</h3>
+                            <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren
+                                personenbezogenen Daten passiert, wenn Sie unsere Website besuchen. Personenbezogene
+                                Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.
+                                Ausführliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text
+                                aufgeführten Datenschutzerklärung.</p>
+                            <h3 class="!font-semibold mb-1 mt-6">Wie erfassen wir Ihre Daten?</h3>
+                            <p>Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann
+                                es sich z.B. um Daten handeln, die Sie in ein Kontaktformular eingeben. <br>
+                                Andere Daten werden automatisch beim Besuch der Website durch unsere IT-Systeme erfasst.
+                                Das sind vor allem technische Daten (z.B. Internetbrowser, Betriebssystem oder Uhrzeit
+                                des Seitenaufrufs). Die Erfassung dieser Daten erfolgt automatisch, sobald Sie unsere
+                                Website betreten.</p>
+                            <h3 class="!font-semibold mb-1 mt-6">Wofür nutzen wir Ihre Daten?</h3>
+                            <p>Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. Andere Daten können zur Analyse Ihres Nutzerverhaltens verwendet werden</p>
+                            <h3 class="!font-semibold mb-1 mt-6">Welche Rechte haben Sie bezüglich Ihrer Daten?</h3>
+                            <p>Sie haben jederzeit das Recht unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung, Sperrung oder Löschung dieser Daten zu verlangen. Hierzu sowie zu weiteren Fragen zum Thema Datenschutz können Sie sich jederzeit unter der im Impressum angegebenen Adresse an uns wenden. Des Weiteren steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="bg-white my-2" x-data="accordion(3)">
+                    <h2 @click="handleClick()" class="flex flex-row justify-between items-center p-3 cursor-pointer">
+                        <span class="text-[24px] !font-semibold ">Allgemeine Hinweise</span>
+                        <i :class="handleRotate()" class="fa-solid fa-sort-down transition-all duration-500"></i>
+                    </h2>
+                    <div x-ref="tab" :style="handleToggle()"
+                        class="overflow-hidden max-h-0 duration-500 transition-all">
+                        <div class="p-3">
+                            <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren
+                                personenbezogenen Daten passiert, wenn Sie unsere Website besuchen. Personenbezogene
+                                Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.
+                                Ausführliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text
+                                aufgeführten Datenschutzerklärung.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="bg-white my-2" x-data="accordion(4)">
+                    <h2 @click="handleClick()" class="flex flex-row justify-between items-center p-3 cursor-pointer">
+                        <span class="text-[24px] !font-semibold ">Allgemeine Hinweise</span>
+                        <i :class="handleRotate()" class="fa-solid fa-sort-down transition-all duration-500"></i>
+                    </h2>
+                    <div x-ref="tab" :style="handleToggle()"
+                        class="overflow-hidden max-h-0 duration-500 transition-all">
+                        <div class="p-3">
+                            <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren
+                                personenbezogenen Daten passiert, wenn Sie unsere Website besuchen. Personenbezogene
+                                Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.
+                                Ausführliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text
+                                aufgeführten Datenschutzerklärung.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="bg-white my-2" x-data="accordion(5)">
+                    <h2 @click="handleClick()" class="flex flex-row justify-between items-center p-3 cursor-pointer">
+                        <span class="text-[24px] !font-semibold ">Allgemeine Hinweise</span>
+                        <i :class="handleRotate()" class="fa-solid fa-sort-down transition-all duration-500"></i>
+                    </h2>
+                    <div x-ref="tab" :style="handleToggle()"
+                        class="overflow-hidden max-h-0 duration-500 transition-all">
+                        <div class="p-3">
+                            <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren
+                                personenbezogenen Daten passiert, wenn Sie unsere Website besuchen. Personenbezogene
+                                Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.
+                                Ausführliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text
+                                aufgeführten Datenschutzerklärung.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="bg-white my-2" x-data="accordion(6)">
+                    <h2 @click="handleClick()" class="flex flex-row justify-between items-center p-3 cursor-pointer">
+                        <span class="text-[24px] !font-semibold ">Allgemeine Hinweise</span>
+                        <i :class="handleRotate()" class="fa-solid fa-sort-down transition-all duration-500"></i>
+                    </h2>
+                    <div x-ref="tab" :style="handleToggle()"
+                        class="overflow-hidden max-h-0 duration-500 transition-all">
+                        <div class="p-3">
+                            <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren
+                                personenbezogenen Daten passiert, wenn Sie unsere Website besuchen. Personenbezogene
+                                Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.
+                                Ausführliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text
+                                aufgeführten Datenschutzerklärung.</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div id="footer" class="md:mt-16 mt-8"></div>
+
+
+
+</body>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="./Docs/javascript/global.js"></script>
+<script src="./Docs/javascript/Navbar.js"></script>
+<script src="./Docs/javascript/Footer.js"></script>
+<script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.store('accordion', {
+            tab: 1
+        });
+
+        Alpine.data('accordion', (idx) => ({
+            init() {
+                this.idx = idx;
+            },
+            idx: -1,
+            handleClick() {
+                this.$store.accordion.tab = this.$store.accordion.tab === this.idx ? 0 : this.idx;
+            },
+            handleRotate() {
+                return this.$store.accordion.tab === this.idx ? 'rotate-180' : '';
+            },
+            handleToggle() {
+                return this.$store.accordion.tab === this.idx ? `max-height: ${this.$refs.tab.scrollHeight}px` : '';
+            }
+        }));
+    })
+</script>
+
+</html>
