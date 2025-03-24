@@ -35,19 +35,20 @@
                     Wir freuen uns, von dir zu hören!
                 </p>
             </div>
-            <form action="" class="md:mt-8 mt-5">
-                <input type="text" placeholder="Name"
+            <form action="https://api.web3forms.com/submit" method="POST" class="md:mt-8 mt-5">
+                <input type="hidden" name="access_key" value="f81f84a3-d8f7-44a9-ae92-3f72b3110184">
+                <input required type="text" placeholder="Name" name="name"
                     class="w-full placeholder:text-sm border-b md:py-5 py-4 border-[#262626]">
-                <input type="email" placeholder="E-Mail"
+                <input required type="email" placeholder="E-Mail" name="email"
                     class="w-full placeholder:text-sm border-b md:py-5 py-4 md:mt-4 mt-3 border-[#262626]">
-                <input type="text" placeholder="Deine Nachricht"
+                <input required type="text" placeholder="Deine Nachricht" name="Bild_hochladen"
                     class="w-full placeholder:text-sm border-b md:py-5 py-4 md:mt-4 mt-3 border-[#262626]">
                 <label for="" class="!text-[#7F7F7F] mb-3 mt-4 block text-sm">Bild hochladen (optional)</label>
-                <div
-                    class="border-2 border-dashed border-[#262626] p-6 flex flex-col items-center justify-center w-full h-40">
-                    <button
-                        class="border-2 border-[#262626] cursor-pointer hover:bg-[#262626] transition-all duration-500 hover:!text-white px-4 py-3 text-sm font-semibold">BILD
-                        AUSWÄHLEN</button>
+                <div id="upload-area" 
+                    class="border-2 border-dashed border-[#262626] rounded-lg p-6 flex flex-col items-center justify-center w-full h-40 cursor-pointer">
+                    <input required type="file" name="img" id="file-upload" accept="image/*" class="hidden">
+                    <button type="button" id="upload-btn"
+                        class="border-2 border-[#262626] px-4 py-3 text-sm font-semibold">BILD AUSWÄHLEN</button>
                 </div>
                 <p class="!text-red-600 text-sm mt-2">Nur Bilder in den Formaten .jpg, .png, etc. sind erlaubt!</p>
                 <button
