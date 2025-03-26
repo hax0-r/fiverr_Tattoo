@@ -19,10 +19,9 @@
     <div id="navbar"></div>
 
 
-
-    <div class="homeBg">
-        <div class="max-w-7xl min-h-[calc(100vh-5rem)] flex items-end justify-center w-full mx-auto p-5">
-            <h1 class="md:text-[160px] !text-white noodle text-center text-8xl font-semobold tracking-wide pb-6 ">
+    <div class="homeBg relative">
+        <div class="max-w-7xl md:h-[640px] h-[500px] flex md:items-end items-start justify-center w-full mx-auto p-5">
+            <h1 class="md:text-[160px] !text-white noodle text-center text-[48px] font-semobold tracking-wide pb-6 ">
                 Stilbruch Tattoo
             </h1>
         </div>
@@ -38,7 +37,7 @@
             bei uns stehst du als Kund:in mit deinen Vorstellungen im Mittelpunkt.</p>
     </div>
 
-    <div id="artist" class="max-w-7xl w-full mx-auto md:mt-20 mt-8 gap-3 p-5 grid md:grid-cols-2 grid-cols-1">
+    <div id="artist" class="max-w-7xl w-full mx-auto md:mt-20 mt-8 gap-3 p-5 grid lg:grid-cols-2 grid-cols-1">
         <a href="./Slava.html">
             <div class="relative flex items-center justify-center">
                 <img loading="lazy" src="./Docs/Assets/img (4).jpg"
@@ -66,7 +65,7 @@
                     SOcio</h2>
             </div>
         </a>
-        <a href="./Jascha.html">
+        <!-- <a href="./Jascha.html">
             <div class="relative flex items-center justify-center">
                 <img loading="lazy" src="./Docs/Assets/img (1).jpg"
                     class="w-full object-cover md:h-[522px] h-80 grayscale" alt="img">
@@ -74,7 +73,7 @@
                     class="uppercase md:bottom-8 bottom-9 !text-white absolute font-semobold noodle md:text-[96px] text-6xl">
                     Jascha</h2>
             </div>
-        </a>
+        </a> -->
 
     </div>
 
@@ -99,7 +98,7 @@
                 <input required type="text" placeholder="Deine Nachricht" name="Bild_hochladen"
                     class="w-full placeholder:text-sm border-b md:py-5 py-4 md:mt-4 mt-3 border-[#262626]">
                 <label for="" class="!text-[#7F7F7F] mb-3 mt-4 block text-sm">Bild hochladen (optional)</label>
-                <div id="upload-area" 
+                <div id="upload-area"
                     class="border-2 border-dashed border-[#262626] rounded-lg p-6 flex flex-col items-center justify-center w-full h-40 cursor-pointer">
                     <input required type="file" name="img" id="file-upload" accept="image/*" class="hidden">
                     <button type="button" id="upload-btn"

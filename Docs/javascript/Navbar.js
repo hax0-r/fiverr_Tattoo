@@ -17,8 +17,6 @@ navbar.innerHTML = `
                     <li> <a href="./index.html#artist" class="hover:text-[#0a3a22] transition-all duration-500">
                             Künstler</a>
                     </li>
-                    <li> <a href="" class="hover:text-[#0a3a22] transition-all duration-500">
-                            Studio</a>
                     </li>
                     <li> <a href="./Tattoopflege.html" class="hover:text-[#0a3a22] transition-all duration-500">Tattoopflege</a></li>
                     <li> <a href="./Contact.html" class="hover:text-[#0a3a22] transition-all duration-500">
@@ -31,7 +29,7 @@ navbar.innerHTML = `
     </div>
 
     <div class="w-full">
-        <div class="bg-white w-full h-20">
+        <div class="bg-white w-full h-[71px]">
             <div class="flex items-center justify-between max-w-7xl w-full mx-auto p-5">
                 <a href="./index.html">
                     <h2 class="uppercase noodle text-2xl">Stilbruch Tattoo</h2>
@@ -42,8 +40,6 @@ navbar.innerHTML = `
                                 class=" font-light cursor-pointer transition-all duration-500">
                                 Künstler</a>
                         </li>
-                        <li> <a href="" class=" font-light cursor-pointer transition-all duration-500">
-                                Studio</a></li>
                         <li> <a href="./Tattoopflege.html"
                                 class=" font-light cursor-pointer transition-all duration-500">
                                 Tattoopflege</a></li>
@@ -51,7 +47,7 @@ navbar.innerHTML = `
                                 Kontakt</a></li>
                     </ul>
                     <div class="lg:hidden">
-                        <i class="fa-solid fa-bars text-2xl cursor-pointer" id="openNav"></i>
+                    <img src="./Docs/Assets/a-mobile-menu-button.png" id="openNav" class="cursor-pointer" alt="">
                     </div>
                 </div>
             </div>
