@@ -12,7 +12,6 @@ footer.innerHTML = `
                         <li><a class="!text-white hover:underline mb-4 block" href="./Slava.html"> SLAVA</a></li>
                         <li><a class="!text-white hover:underline mb-4 block" href="./Toni.html"> TONI</a></li>
                         <li><a class="!text-white hover:underline mb-4 block" href="./Socio.html"> SOCIO</a></li>
-                        <li><a class="!text-white hover:underline mb-4 block" href="./Jascha.html"> JASCHA</a></li>
                     </ul>
                     <ul class="text-sm">
                         <li class="!text-[#7F7F7F] mb-6 uppercase">Über</li>
