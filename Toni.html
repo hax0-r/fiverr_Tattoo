@@ -17,7 +17,7 @@
 </head>
 
 <body>
-
+    <div id="notificationPopup"></div>
     <div id="bottomToTopScroll"></div>
     <div id="navbar"></div>
 
@@ -77,18 +77,23 @@
             </p>
         </div>
         <div class="md:max-w-[50%] w-full">
-            <form action="https://api.web3forms.com/submit" method="POST">
+            <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
                 <input type="hidden" name="access_key" value="f81f84a3-d8f7-44a9-ae92-3f72b3110184">
+
                 <input required type="text" placeholder="Name" name="name"
                     class="w-full placeholder:text-sm border-b md:py-5 py-4 border-[#262626]">
+
                 <input required type="email" placeholder="E-Mail" name="email"
                     class="w-full placeholder:text-sm border-b md:py-5 py-4 md:mt-4 mt-3 border-[#262626]">
+
                 <input required type="text" placeholder="Deine Nachricht" name="Bild_hochladen"
                     class="w-full placeholder:text-sm border-b md:py-5 py-4 md:mt-4 mt-3 border-[#262626]">
-                <label for="" class="!text-[#7F7F7F] mb-3 mt-4 block text-sm">Bild hochladen (optional)</label>
+
+                <label class="!text-[#7F7F7F] mb-3 mt-4 block text-sm">Bild hochladen (optional)</label>
+
                 <div id="upload-area"
                     class="border-2 border-dashed border-[#262626] rounded-lg p-6 flex flex-col items-center justify-center w-full h-40 cursor-pointer relative overflow-hidden">
-                    <input required type="file" name="img" id="file-upload" accept="image/*" class="hidden">
+                    <input type="file" id="file-upload" accept="image/*" class="hidden">
                     <button type="button" id="upload-btn"
                         class="border-2 border-[#262626] px-4 py-3 text-sm font-semibold bg-white z-10">BILD
                         AUSWÄHLEN</button>
@@ -96,9 +101,13 @@
                         class="absolute inset-0 w-full h-full object-cover rounded-lg hidden pointer-events-none"
                         alt="Preview" />
                 </div>
+
                 <p class="!text-red-600 text-sm mt-2">Nur Bilder in den Formaten .jpg, .png, etc. sind erlaubt!</p>
+
                 <button
-                    class="border-2 border-[#262626] cursor-pointer bg-[#262626] transition-all duration-500 mt-4 hover:!text-black hover:bg-white !text-white px-8 py-3 text-sm font-semibold">Absenden</button>
+                    class="border-2 border-[#262626] cursor-pointer bg-[#262626] transition-all duration-500 mt-4 hover:!text-black hover:bg-white !text-white px-8 py-3 text-sm font-semibold">
+                    Absenden
+                </button>
             </form>
         </div>
     </div>
