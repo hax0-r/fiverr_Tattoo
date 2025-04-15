@@ -37,12 +37,29 @@ document.addEventListener("DOMContentLoaded", function () {
 const fileInput = document.getElementById('file-upload');
 const uploadBtn = document.getElementById('upload-btn');
 const uploadArea = document.getElementById('upload-area');
+const previewImg = document.getElementById('preview-img');
 
-uploadBtn.addEventListener('click', function(event) {
-    event.stopPropagation(); 
+// Handle button click
+uploadBtn.addEventListener('click', function (event) {
+    event.stopPropagation();
     fileInput.click();
 });
 
-uploadArea.addEventListener('click', function() {
+// Handle area click
+uploadArea.addEventListener('click', function () {
     fileInput.click();
 });
+
+// Show preview image
+fileInput.addEventListener('change', function (event) {
+    const file = event.target.files[0];
+    if (file && file.type.startsWith('image/')) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            previewImg.src = e.target.result;
+            previewImg.classList.remove('hidden');
+        };
+        reader.readAsDataURL(file);
+    }
+});
+
