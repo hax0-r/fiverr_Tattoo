@@ -125,7 +125,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 // Send email via EmailJS
                 emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form, EMAILJS_PUBLIC_KEY)
                     .then(() => {
-                        alert("Nachricht erfolgreich gesendet!");
                         form.reset();
                         previewImg.src = "";
                         previewImg.classList.add("hidden");
