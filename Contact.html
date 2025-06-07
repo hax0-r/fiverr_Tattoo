@@ -1,143 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kontakt – Stilbruch Tattoo Berlin</title>
-    <meta
-      name="description"
-      content="Du hast Fragen oder willst einen Termin
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontakt – Stilbruch Tattoo Berlin</title>
+  <meta name="description" content="Du hast Fragen oder willst einen Termin
     vereinbaren? Kontaktiere das Stilbruch Tattoo Studio Berlin direkt über unser
-    Kontaktformular."
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/lenis@1.1.13/dist/lenis.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="./Docs/Style.css" />
-  </head>
+    Kontaktformular." />
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="./Docs/Style.css" />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
 
-  <body>
-    <div id="notificationPopup"></div>
-    <div id="bottomToTopScroll"></div>
-    <div id="navbar"></div>
+<body>
+  <div id="notificationPopup"></div>
+  <div id="bottomToTopScroll"></div>
+  <div id="navbar"></div>
 
-    <div
-      class="w-full mx-auto flex items-center justify-between md:gap-14 gap-6 lg:flex-row flex-col"
-    >
-      <div class="lg:max-w-[50%] w-full">
-        <img
-          loading="lazy"
-          class="w-full"
-          src="./Docs/Assets/contact.png"
-          alt="img"
-        />
-      </div>
-      <div class="lg:max-w-xl w-full mr-auto p-5">
-        <div class="">
-          <h2 class="md:text-[64px] mb-3 noodle text-5xl">Kontakt</h2>
-          <p>
-            Du hast Fragen oder möchtest einen Beratungstermin für dein nächstes
-            Tattoo vereinbaren? Wir sind für dich da! Teile uns gern schon erste
-            Ideen oder Wünsche mit – so können wir uns perfekt auf dein Tattoo
-            vorbereiten. <br /><br />
-
-            Telefon: 0152 22 47 48 25 <br />
-            E-Mail: studio@stilbruch-tattoo.com
-            <br /><br />
-            Anschrift: Oderstraße 9, 10247 Berlin
-            <br /><br />
-            Wir freuen uns, von dir zu hören!
-          </p>
-        </div>
-        <form
-          action="https://api.web3forms.com/submit"
-          method="POST"
-          enctype="multipart/form-data"
-        >
-          <input
-            type="hidden"
-            name="access_key"
-            value="60b64417-4437-4542-8f84-d0556affc8dc"
-          />
-
-          <input
-            required
-            type="text"
-            placeholder="Name"
-            name="name"
-            class="w-full placeholder:text-sm border-b md:py-5 py-4 border-[#262626]"
-          />
-
-          <input
-            required
-            type="email"
-            placeholder="E-Mail"
-            name="email"
-            class="w-full placeholder:text-sm border-b md:py-5 py-4 md:mt-4 mt-3 border-[#262626]"
-          />
-
-          <input
-            required
-            type="text"
-            placeholder="Deine Nachricht"
-            name="Bild_hochladen"
-            class="w-full placeholder:text-sm border-b md:py-5 py-4 md:mt-4 mt-3 border-[#262626]"
-          />
-
-          <label class="!text-[#7F7F7F] mb-3 mt-4 block text-sm"
-            >Bild hochladen (optional)</label
-          >
-
-          <div
-            id="upload-area"
-            class="border-2 border-dashed border-[#262626] rounded-lg p-6 flex flex-col items-center justify-center w-full h-40 cursor-pointer relative overflow-hidden"
-          >
-            <input
-              type="file"
-              id="file-upload"
-              accept="image/*"
-              class="hidden"
-            />
-            <button
-              type="button"
-              id="upload-btn"
-              class="border-2 border-[#262626] px-4 py-3 text-sm font-semibold bg-white z-10"
-            >
-              BILD AUSWÄHLEN
-            </button>
-            <img
-              id="preview-img"
-              class="absolute inset-0 w-full h-full object-cover rounded-lg hidden pointer-events-none"
-              alt="Preview"
-            />
-          </div>
-
-          <p class="!text-red-600 text-sm mt-2">
-            Nur Bilder in den Formaten .jpg, .png, etc. sind erlaubt!
-          </p>
-
-          <button
-            class="border-2 border-[#262626] cursor-pointer bg-[#262626] transition-all duration-500 mt-4 hover:!text-black hover:bg-white !text-white px-8 py-3 text-sm font-semibold"
-          >
-            Absenden
-          </button>
-        </form>
-      </div>
+  <div class="w-full mx-auto flex items-center justify-between md:gap-14 gap-6 lg:flex-row flex-col">
+    <div class="lg:max-w-[50%] w-full">
+      <img loading="lazy" class="w-full" src="./Docs/Assets/contact.png" alt="img" />
     </div>
+    <div class="lg:max-w-xl w-full mr-auto p-5">
+      <div class="">
+        <h2 class="md:text-[64px] mb-3 noodle text-5xl">Kontakt</h2>
+        <p>
+          Du hast Fragen oder möchtest einen Beratungstermin für dein nächstes
+          Tattoo vereinbaren? Wir sind für dich da! Teile uns gern schon erste
+          Ideen oder Wünsche mit – so können wir uns perfekt auf dein Tattoo
+          vorbereiten. <br /><br />
 
-    <div id="footer"></div>
-  </body>
-  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
-  <script src="./Docs/javascript/global.js"></script>
-  <script src="./Docs/javascript/Navbar.js"></script>
-  <script src="./Docs/javascript/Footer.js"></script>
+          Telefon: 0152 22 47 48 25 <br />
+          E-Mail: studio@stilbruch-tattoo.com
+          <br /><br />
+          Anschrift: Oderstraße 9, 10247 Berlin
+          <br /><br />
+          Wir freuen uns, von dir zu hören!
+        </p>
+      </div>
+   <form id="contact-form">
+        <input required type="text" placeholder="Name" name="name"
+          class="w-full placeholder:text-sm border-b md:py-5 py-4 border-[#262626]" />
+
+        <input required type="email" placeholder="E-Mail" name="email"
+          class="w-full placeholder:text-sm border-b md:py-5 py-4 md:mt-4 mt-3 border-[#262626]" />
+
+        <input required type="text" placeholder="Deine Nachricht" name="Bild_hochladen"
+          class="w-full placeholder:text-sm border-b md:py-5 py-4 md:mt-4 mt-3 border-[#262626]" />
+
+        <label class="!text-[#7F7F7F] mb-3 mt-4 block text-sm">Bild hochladen (optional)</label>
+
+        <div id="upload-area"
+          class="border-2 border-dashed border-[#262626] rounded-lg p-6 flex flex-col items-center justify-center w-full h-40 cursor-pointer relative overflow-hidden">
+          <input type="file" id="file-upload" accept="image/*" class="hidden" />
+          <button type="button" id="upload-btn"
+            class="border-2 border-[#262626] px-4 py-3 text-sm font-semibold bg-white z-10">
+            BILD AUSWÄHLEN
+          </button>
+          <img id="preview-img"
+            class="absolute inset-0 w-full h-full object-cover rounded-lg hidden pointer-events-none" alt="Preview" />
+        </div>
+
+        <p class="!text-red-600 text-sm my-2">
+          Nur Bilder in den Formaten .jpg, .png, etc. sind erlaubt!
+        </p>
+        <div class="g-recaptcha" data-sitekey="6LfDDVgrAAAAAB7GfG2NZtegHCBuIiw7N3Fop34z"></div>
+
+        <button
+          class="border-2 border-[#262626] cursor-pointer bg-[#262626] transition-all duration-500 mt-4 hover:!text-black hover:bg-white !text-white px-8 py-3 text-sm font-semibold">
+          Absenden
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+</body>
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function () {
+    emailjs.init("36-k7q5FmxP0IOgdy");
+  })();
+</script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="./Docs/javascript/global.js"></script>
+<script src="./Docs/javascript/Navbar.js"></script>
+<script src="./Docs/javascript/Footer.js"></script>
+
 </html>
