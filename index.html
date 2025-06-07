@@ -2,76 +2,84 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stilbruch Tattoo Berlin – Tattoo Studio für Fineline, Handpoke & mehr</title>
-    <meta name="description" content="Modernes Tattoo Studio in Berlin. Künstler
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    Stilbruch Tattoo Berlin – Tattoo Studio für Fineline, Handpoke & mehr
+  </title>
+  <meta name="description" content="Modernes Tattoo Studio in Berlin. Künstler
     für Fineline, Blackwork, Handpoke & individuelle Tattoos. Jetzt Termin sichern
-    bei Stilbruch Tattoo Berlin.">
-    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="./Docs/Style.css">
+    bei Stilbruch Tattoo Berlin." />
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="./Docs/Style.css" />
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
+  <!-- Add this below your form -->
 
-    <!-- Add this below your form -->
+  <div id="notificationPopup"></div>
+  <div id="bottomToTopScroll"></div>
+  <div id="navbar"></div>
 
-    <div id="notificationPopup"></div>
-    <div id="bottomToTopScroll"></div>
-    <div id="navbar"></div>
-
-
-    <div class="homeBg relative">
-        <div class="max-w-7xl md:h-[640px] h-[500px] flex md:items-end items-start justify-center w-full mx-auto p-5">
-            <h1 class="md:text-[160px] !text-white noodle text-center text-[48px] font-semobold tracking-wide pb-6 ">
-                Stilbruch Tattoo
-            </h1>
-        </div>
+  <div class="homeBg relative">
+    <div class="max-w-7xl md:h-[640px] h-[500px] flex md:items-end items-start justify-center w-full mx-auto p-5">
+      <h1 class="md:text-[160px] !text-white noodle text-center text-[48px] font-semobold tracking-wide pb-6">
+        Stilbruch Tattoo
+      </h1>
     </div>
+  </div>
 
-    <div
-        class="max-w-7xl w-full mx-auto md:mt-20 mt-10 flex items-start justify-between md:gap-10 p-5 gap-6 md:flex-row flex-col">
-        <h2 class="text-[24px] md:max-w-[50%] w-full">Willkommen bei Stilbruch Tattoo! Wir sind ein kleines Tattoo
-            Studio im Herzen von Berlin.</h2>
-        <p class="md:max-w-[50%] w-full">Beim Tätowieren bringen wir nicht einfach nur Farbe unter die Haut, oft haben
-            Tattoos eine emotionale Bedeutung, sie erinnern uns an liebe Menschen, halten Erlebnisse fest, schaﬀen
-            Erinnerungen und drücken aus wer wir sind. Wir bei Stilbruch Tattoo sind uns dieser Verantwortung bewusst,
-            bei uns stehst du als Kund:in mit deinen Vorstellungen im Mittelpunkt.</p>
-    </div>
+  <div
+    class="max-w-7xl w-full mx-auto md:mt-20 mt-10 flex items-start justify-between md:gap-10 p-5 gap-6 md:flex-row flex-col">
+    <h2 class="text-[24px] md:max-w-[50%] w-full">
+      Willkommen bei Stilbruch Tattoo! Wir sind ein Tattoo Studio im Herzen
+      von Berlin.
+    </h2>
+    <p class="md:max-w-[50%] w-full">
+      Beim Tätowieren bringen wir nicht einfach nur Farbe unter die Haut, oft
+      haben Tattoos eine emotionale Bedeutung, sie erinnern uns an liebe
+      Menschen, halten Erlebnisse fest, schaﬀen Erinnerungen und drücken aus
+      wer wir sind. Wir bei Stilbruch Tattoo sind uns dieser Verantwortung
+      bewusst, bei uns stehst du als Kund:in mit deinen Vorstellungen im
+      Mittelpunkt.
+    </p>
+  </div>
 
-    <div id="artist" class="max-w-7xl w-full mx-auto md:mt-20 mt-8 gap-3 p-5 grid lg:grid-cols-2 grid-cols-1">
-        <a href="./Slava.html">
-            <div class="relative flex items-center justify-center">
-                <img loading="lazy" src="./Docs/Assets/img (4).jpg"
-                    class="w-full object-cover md:h-[522px] h-80 grayscale " alt="img">
-                <h2
-                    class="uppercase md:bottom-8 bottom-9 !text-white absolute font-semobold noodle md:text-[96px] text-6xl">
-                    Slava</h2>
-            </div>
-        </a>
-        <a href="./Toni.html">
-            <div class="relative flex items-center justify-center">
-                <img loading="lazy" src="./Docs/Assets/img (3).jpg"
-                    class="w-full object-cover md:h-[522px] h-80 grayscale" alt="img">
-                <h2
-                    class="uppercase md:bottom-8 bottom-9 !text-white absolute font-semobold noodle md:text-[96px] text-6xl">
-                    Toni</h2>
-            </div>
-        </a>
-        <a href="./Socio.html">
-            <div class="relative flex items-center justify-center">
-                <img loading="lazy" src="./Docs/Assets/img (2).jpg"
-                    class="w-full object-cover md:h-[522px] h-80 grayscale" alt="img">
-                <h2
-                    class="uppercase md:bottom-8 bottom-9 !text-white absolute font-semobold noodle md:text-[96px] text-6xl">
-                    SOcio</h2>
-            </div>
-        </a>
-        <!-- <a href="./Jascha.html">
+  <div id="artist" class="max-w-7xl w-full mx-auto md:mt-20 mt-8 gap-3 p-5 grid lg:grid-cols-2 grid-cols-1">
+    <a href="./Slava.html">
+      <div class="relative flex items-center justify-center">
+        <img loading="lazy" src="./Docs/Assets/img (4).jpg" class="w-full object-cover md:h-[522px] h-80 grayscale"
+          alt="img" />
+        <h2 class="uppercase md:bottom-8 bottom-9 !text-white absolute font-semobold noodle md:text-[96px] text-6xl">
+          Slava
+        </h2>
+      </div>
+    </a>
+    <a href="./Toni.html">
+      <div class="relative flex items-center justify-center">
+        <img loading="lazy" src="./Docs/Assets/img (3).jpg" class="w-full object-cover md:h-[522px] h-80 grayscale"
+          alt="img" />
+        <h2 class="uppercase md:bottom-8 bottom-9 !text-white absolute font-semobold noodle md:text-[96px] text-6xl">
+          Toni
+        </h2>
+      </div>
+    </a>
+    <a href="./Socio.html">
+      <div class="relative flex items-center justify-center">
+        <img loading="lazy" src="./Docs/Assets/img (2).jpg" class="w-full object-cover md:h-[522px] h-80 grayscale"
+          alt="img" />
+        <h2 class="uppercase md:bottom-8 bottom-9 !text-white absolute font-semobold noodle md:text-[96px] text-6xl">
+          SOcio
+        </h2>
+      </div>
+    </a>
+    <!-- <a href="./Jascha.html">
             <div class="relative flex items-center justify-center">
                 <img loading="lazy" src="./Docs/Assets/img (1).jpg"
                     class="w-full object-cover md:h-[522px] h-80 grayscale" alt="img">
@@ -80,62 +88,66 @@
                     Jascha</h2>
             </div>
         </a> -->
+  </div>
 
+  <div
+    class="max-w-7xl w-full mx-auto md:mt-20 mt-10 flex items-start justify-between md:gap-10 p-5 gap-6 md:flex-row flex-col">
+    <div class="md:max-w-[50%] w-full">
+      <h2 class="md:text-[64px] mb-3 noodle text-5xl">Kontakt</h2>
+      <p>
+        Du hast Fragen oder möchtest einen Beratungstermin für dein nächstes
+        Tattoo vereinbaren? Wir sind für dich da! Teile uns gern schon erste
+        Ideen oder Wünsche mit – so können wir uns perfekt auf dein Tattoo
+        vorbereiten. <br /><br />
+        Wir freuen uns, von dir zu hören!
+      </p>
     </div>
+    <div class="md:max-w-[50%] w-full">
+      <form id="contact-form">
+        <input required type="text" placeholder="Name" name="name"
+          class="w-full placeholder:text-sm border-b md:py-5 py-4 border-[#262626]" />
 
-    <div
-        class="max-w-7xl w-full mx-auto md:mt-20 mt-10 flex items-start justify-between md:gap-10 p-5 gap-6 md:flex-row flex-col">
-        <div class="md:max-w-[50%] w-full">
-            <h2 class="md:text-[64px] mb-3 noodle text-5xl ">Kontakt</h2>
-            <p>Du hast Fragen oder möchtest einen Beratungstermin für dein nächstes Tattoo vereinbaren? Wir sind für
-                dich da! Teile uns gern schon erste Ideen oder Wünsche mit – so können wir uns perfekt auf dein Tattoo
-                vorbereiten.
-                <br><br>
-                Wir freuen uns, von dir zu hören!
-            </p>
+        <input required type="email" placeholder="E-Mail" name="email"
+          class="w-full placeholder:text-sm border-b md:py-5 py-4 md:mt-4 mt-3 border-[#262626]" />
+
+        <input required type="text" placeholder="Deine Nachricht" name="Bild_hochladen"
+          class="w-full placeholder:text-sm border-b md:py-5 py-4 md:mt-4 mt-3 border-[#262626]" />
+
+        <label class="!text-[#7F7F7F] mb-3 mt-4 block text-sm">Bild hochladen (optional)</label>
+
+        <div id="upload-area"
+          class="border-2 border-dashed border-[#262626] rounded-lg p-6 flex flex-col items-center justify-center w-full h-40 cursor-pointer relative overflow-hidden">
+          <input type="file" id="file-upload" accept="image/*" class="hidden" />
+          <button type="button" id="upload-btn"
+            class="border-2 border-[#262626] px-4 py-3 text-sm font-semibold bg-white z-10">
+            BILD AUSWÄHLEN
+          </button>
+          <img id="preview-img"
+            class="absolute inset-0 w-full h-full object-cover rounded-lg hidden pointer-events-none" alt="Preview" />
         </div>
-        <div class="md:max-w-[50%] w-full">
-            <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
-                <input type="hidden" name="access_key" value="f81f84a3-d8f7-44a9-ae92-3f72b3110184">
 
-                <input required type="text" placeholder="Name" name="name"
-                    class="w-full placeholder:text-sm border-b md:py-5 py-4 border-[#262626]">
+        <p class="!text-red-600 text-sm mt-2">
+          Nur Bilder in den Formaten .jpg, .png, etc. sind erlaubt!
+        </p>
+        <div class="g-recaptcha" data-sitekey="6LfDDVgrAAAAAB7GfG2NZtegHCBuIiw7N3Fop34z"></div>
 
-                <input required type="email" placeholder="E-Mail" name="email"
-                    class="w-full placeholder:text-sm border-b md:py-5 py-4 md:mt-4 mt-3 border-[#262626]">
-
-                <input required type="text" placeholder="Deine Nachricht" name="Bild_hochladen"
-                    class="w-full placeholder:text-sm border-b md:py-5 py-4 md:mt-4 mt-3 border-[#262626]">
-
-                <label class="!text-[#7F7F7F] mb-3 mt-4 block text-sm">Bild hochladen (optional)</label>
-
-                <div id="upload-area"
-                    class="border-2 border-dashed border-[#262626] rounded-lg p-6 flex flex-col items-center justify-center w-full h-40 cursor-pointer relative overflow-hidden">
-                    <input type="file" id="file-upload" accept="image/*" class="hidden">
-                    <button type="button" id="upload-btn"
-                        class="border-2 border-[#262626] px-4 py-3 text-sm font-semibold bg-white z-10">BILD
-                        AUSWÄHLEN</button>
-                    <img id="preview-img"
-                        class="absolute inset-0 w-full h-full object-cover rounded-lg hidden pointer-events-none"
-                        alt="Preview" />
-                </div>
-
-                <p class="!text-red-600 text-sm mt-2">Nur Bilder in den Formaten .jpg, .png, etc. sind erlaubt!</p>
-
-                <button
-                    class="border-2 border-[#262626] cursor-pointer bg-[#262626] transition-all duration-500 mt-4 hover:!text-black hover:bg-white !text-white px-8 py-3 text-sm font-semibold">
-                    Absenden
-                </button>
-            </form>
-
-        </div>
+        <button
+          class="border-2 border-[#262626] cursor-pointer bg-[#262626] transition-all duration-500 mt-4 hover:!text-black hover:bg-white !text-white px-8 py-3 text-sm font-semibold">
+          Absenden
+        </button>
+      </form>
     </div>
+  </div>
 
-    <div id="footer" class="md:mt-20 mt-10"></div>
-
-
-
+  <div id="footer" class="md:mt-20 mt-10"></div>
 </body>
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function () {
+    emailjs.init("36-k7q5FmxP0IOgdy");
+  })();
+</script>
 <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
 <script src="./Docs/javascript/global.js"></script>
 <script src="./Docs/javascript/Navbar.js"></script>
