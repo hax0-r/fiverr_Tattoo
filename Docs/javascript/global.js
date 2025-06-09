@@ -42,9 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
 // form 
-
 document.addEventListener("DOMContentLoaded", function () {
     const fileInput = document.getElementById('file-upload');
     const uploadBtn = document.getElementById('upload-btn');
@@ -57,12 +55,9 @@ document.addEventListener("DOMContentLoaded", function () {
     imageInputHidden.name = "image_url";
     form.appendChild(imageInputHidden);
 
-    const EMAILJS_SERVICE_ID = "service_nifj655";
-    const EMAILJS_TEMPLATE_ID = "template_chkg0wh";
-    const EMAILJS_PUBLIC_KEY = "36-k7q5FmxP0IOgdy";
-
     let imageFile = null;
 
+    // Trigger file input on click
     uploadBtn.addEventListener('click', function (e) {
         e.stopPropagation();
         fileInput.click();
@@ -72,6 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
         fileInput.click();
     });
 
+    // Preview selected image
     fileInput.addEventListener('change', function (event) {
         const file = event.target.files[0];
         if (file && file.type.startsWith('image/')) {
@@ -85,21 +81,41 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    // Form submission
     form.addEventListener("submit", async function (e) {
+
+        const botcheck = form.querySelector("input[name='botcheck']").value;
+        if (botcheck !== "") {
+            alert("Bot erkannt.");
+            e.preventDefault();
+            return;
+        }
+
+        const message = form.querySelector("input[name='Bild_hochladen']").value;
+        const linkRegex = /(?:https?:\/\/|www\.)\S+/gi;
+        if (linkRegex.test(message)) {
+            alert("Bitte keine Links in die Nachricht einfügen.");
+            e.preventDefault();
+            return;
+        }
+
+        const emails = form.querySelector("input[name='email']").value;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(emails)) {
+            alert("Bitte geben Sie eine gültige E-Mail ein.");
+            e.preventDefault();
+            return;
+        }
+
         if (!imageFile) {
             alert("Bitte wählen Sie zuerst ein Bild aus.");
             e.preventDefault();
             return;
         }
 
-        e.preventDefault(); // wait until image uploads
+        e.preventDefault(); // Prevent default until upload is complete
 
-        const email = emailInput.value.trim();
-        if (!email.includes("@")) {
-            alert("Bitte geben Sie eine gültige E-Mail ein.");
-            return;
-        }
-
+        const email = emails.trim();
         const namePart = email.split("@")[0];
         const renamedFile = new File([imageFile], `${namePart}_${imageFile.name}`, {
             type: imageFile.type,
@@ -122,24 +138,38 @@ document.addEventListener("DOMContentLoaded", function () {
                 const imageUrl = result.data.url;
                 imageInputHidden.value = imageUrl;
 
-                // Send email via EmailJS
-                emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form, EMAILJS_PUBLIC_KEY)
-                    .then(() => {
+                // Proceed with the real form submission
+                const web3FormData = new FormData(form);
+
+                try {
+                    const response = await fetch("https://api.web3forms.com/submit", {
+                        method: "POST",
+                        body: web3FormData,
+                    });
+
+                    const json = await response.json();
+
+                    if (json.success) {
+                        // Reset form
                         form.reset();
                         previewImg.src = "";
                         previewImg.classList.add("hidden");
 
+                        // Show success message
                         const successMsg = document.getElementById("success-message");
-                        if (successMsg) {
-                            successMsg.classList.remove("hidden");
-                            setTimeout(() => {
-                                successMsg.classList.add("hidden");
-                            }, 4000);
-                        }
-                    }, (error) => {
-                        console.error("EmailJS error:", error);
-                        alert("Fehler beim Senden der Nachricht.");
-                    });
+                        successMsg.classList.remove("hidden");
+
+                        // Hide after 4 seconds
+                        setTimeout(() => {
+                            successMsg.classList.add("hidden");
+                        }, 4000);
+                    } else {
+                        alert("Fehler beim Senden des Formulars.");
+                    }
+                } catch (err) {
+                    console.error("Submit Error:", err);
+                    alert("Fehler beim Senden des Formulars.");
+                }
 
             } else {
                 alert("Bild-Upload fehlgeschlagen.");
@@ -150,5 +180,4 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-
 

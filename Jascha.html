@@ -11,7 +11,6 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="stylesheet" href="./Docs/Style.css" />
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -75,7 +74,10 @@
       </p>
     </div>
     <div class="md:max-w-[50%] w-full">
-     <form id="contact-form">
+      <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="access_key" value="60b64417-4437-4542-8f84-d0556affc8dc" />
+        <input type="text" name="botcheck" class="hidden" style="display: none;" tabindex="-1" autocomplete="off">
+
         <input required type="text" placeholder="Name" name="name"
           class="w-full placeholder:text-sm border-b md:py-5 py-4 border-[#262626]" />
 
@@ -98,10 +100,9 @@
             class="absolute inset-0 w-full h-full object-cover rounded-lg hidden pointer-events-none" alt="Preview" />
         </div>
 
-        <p class="!text-red-600 text-sm my-2">
+        <p class="!text-red-600 text-sm mt-2">
           Nur Bilder in den Formaten .jpg, .png, etc. sind erlaubt!
         </p>
-        <div class="g-recaptcha" data-sitekey="6LfDDVgrAAAAAB7GfG2NZtegHCBuIiw7N3Fop34z"></div>
 
         <button
           class="border-2 border-[#262626] cursor-pointer bg-[#262626] transition-all duration-500 mt-4 hover:!text-black hover:bg-white !text-white px-8 py-3 text-sm font-semibold">
@@ -113,13 +114,6 @@
 
   <div id="footer" class="md:mt-16 mt-8"></div>
 </body>
-<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<script>
-  (function () {
-    emailjs.init("36-k7q5FmxP0IOgdy");
-  })();
-</script>
 <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
 <script src="./Docs/javascript/global.js"></script>
 <script src="./Docs/javascript/Navbar.js"></script>
