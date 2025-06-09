@@ -42,7 +42,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// form 
 document.addEventListener("DOMContentLoaded", function () {
     const fileInput = document.getElementById('file-upload');
     const uploadBtn = document.getElementById('upload-btn');
@@ -56,6 +55,13 @@ document.addEventListener("DOMContentLoaded", function () {
     form.appendChild(imageInputHidden);
 
     let imageFile = null;
+
+    // ✅ reCAPTCHA global callback
+    window.onloadCallback = function () {
+        grecaptcha.render('recaptcha', {
+            'sitekey': '6LfDDVgrAAAAAB7GfG2NZtegHCBuIiw7N3Fop34z' // replace with your real site key
+        });
+    };
 
     // Trigger file input on click
     uploadBtn.addEventListener('click', function (e) {
@@ -83,11 +89,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Form submission
     form.addEventListener("submit", async function (e) {
+        e.preventDefault(); // Always prevent default first
+
+        // reCAPTCHA check
+        const recaptchaResponse = grecaptcha.getResponse();
+        if (!recaptchaResponse) {
+            alert("Bitte bestätigen Sie, dass Sie kein Roboter sind.");
+            return;
+        }
 
         const botcheck = form.querySelector("input[name='botcheck']").value;
         if (botcheck !== "") {
             alert("Bot erkannt.");
-            e.preventDefault();
             return;
         }
 
@@ -95,7 +108,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const linkRegex = /(?:https?:\/\/|www\.)\S+/gi;
         if (linkRegex.test(message)) {
             alert("Bitte keine Links in die Nachricht einfügen.");
-            e.preventDefault();
             return;
         }
 
@@ -103,17 +115,13 @@ document.addEventListener("DOMContentLoaded", function () {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(emails)) {
             alert("Bitte geben Sie eine gültige E-Mail ein.");
-            e.preventDefault();
             return;
         }
 
         if (!imageFile) {
             alert("Bitte wählen Sie zuerst ein Bild aus.");
-            e.preventDefault();
             return;
         }
-
-        e.preventDefault(); // Prevent default until upload is complete
 
         const email = emails.trim();
         const namePart = email.split("@")[0];
@@ -138,8 +146,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 const imageUrl = result.data.url;
                 imageInputHidden.value = imageUrl;
 
-                // Proceed with the real form submission
+                // Proceed with real form submission
                 const web3FormData = new FormData(form);
+                web3FormData.append("g-recaptcha-response", recaptchaResponse); // ✅ Required by Web3Forms
 
                 try {
                     const response = await fetch("https://api.web3forms.com/submit", {
@@ -150,16 +159,14 @@ document.addEventListener("DOMContentLoaded", function () {
                     const json = await response.json();
 
                     if (json.success) {
-                        // Reset form
                         form.reset();
                         previewImg.src = "";
                         previewImg.classList.add("hidden");
+                        grecaptcha.reset(); // ✅ Reset reCAPTCHA
 
-                        // Show success message
                         const successMsg = document.getElementById("success-message");
                         successMsg.classList.remove("hidden");
 
-                        // Hide after 4 seconds
                         setTimeout(() => {
                             successMsg.classList.add("hidden");
                         }, 4000);
@@ -180,4 +187,3 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-
